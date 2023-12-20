@@ -1,0 +1,16 @@
+﻿﻿@using simple_authentication.Provider.Interface
+@inject IUserProvider _UserProvider
+@{
+    var currentUser = await _UserProvider.GetCurrentUser();
+}
+@if (_UserProvider.IsLoggedIn())
+{
+    <div class="d-flex gap-2 align-items-center justify-content-center">
+        <span>
+            Logged in as @currentUser.Name
+        </span>
+        <a asp-controller="Auth" asp-action="Logout" class="btn btn-danger">
+            Logout
+        </a>
+    </div>
+}
