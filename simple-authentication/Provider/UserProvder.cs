@@ -1,10 +1,12 @@
-﻿using simple_authentication.Data;
+﻿using Microsoft.AspNetCore.Authorization;
+using simple_authentication.Data;
 using simple_authentication.Entity;
 using simple_authentication.Provider.Interface;
 using System.Security.Claims;
 
 namespace simple_authentication.Provider
 {
+  
     public class UserProvider : IUserProvider
     {
         private readonly IHttpContextAccessor _accessor;

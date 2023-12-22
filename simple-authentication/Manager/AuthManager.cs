@@ -21,7 +21,7 @@ namespace simple_authentication.Manager
 
         public async Task login(string username, string password)
         {
-            var user = await _dbContext.users.FirstOrDefaultAsync(x => x.Email.ToLower() == username.ToLower().Trim());
+            var user = await _dbContext.users.FirstOrDefaultAsync(x => x.Name.ToLower() == username.ToLower().Trim());
             if (user == null)
             {
                 throw new Exception("Invalid username");
