@@ -4,6 +4,6 @@ simple authenticcation using Asp.Net Core
 
 2.Postgres database has been used
 
-3. CurrentUserProvider has been used to retrieve user data
+3.CurrentUserProvider has been used to retrieve user data
    
 4.Ef core has been used 
